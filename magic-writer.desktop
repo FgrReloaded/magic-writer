@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Magic Writer
+Comment=AI-powered English text enhancement
+Exec=python3 /home/fgrreloaded/FgrReloaded/Programming/Extensions/magic-writer/magic_writer.py
+Icon=accessories-text-editor
+Terminal=true
+Categories=Utility;TextTools;
+StartupNotify=true
