@@ -14,23 +14,22 @@ if ! command -v pip3 &> /dev/null; then
     exit 1
 fi
 
-# Install xclip if not already installed
-if ! command -v xclip &> /dev/null; then
-    echo "xclip not found. Attempting to install..."
+# Install xclip and xsel if not already installed
+if ! command -v xclip &> /dev/null || ! command -v xsel &> /dev/null; then
+    echo "xclip or xsel not found. Attempting to install..."
 
     # Try to detect package manager
     if command -v apt &> /dev/null; then
         sudo apt update
-        sudo apt install -y xclip
+        sudo apt install -y xclip xsel
     elif command -v pacman &> /dev/null; then
-        sudo pacman -S --noconfirm xclip
+        sudo pacman -S --noconfirm xclip xsel
     elif command -v dnf &> /dev/null; then
-        sudo dnf install -y xclip
+        sudo dnf install -y xclip xsel
     elif command -v yum &> /dev/null; then
-        sudo yum install -y xclip
+        sudo yum install -y xclip xsel
     else
-        echo "Error: Could not automatically install xclip. Please install it manually."
-        exit 1
+        echo "Warning: Could not automatically install clipboard utilities. Please install xclip and xsel manually."
     fi
 fi
 

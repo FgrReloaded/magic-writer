@@ -93,6 +93,22 @@ cp magic-writer.desktop ~/.local/share/applications/
 - If you get permission errors when accessing the keyboard, you may need to run the script with sudo or adjust permissions.
 - If xclip fails to get selected text, try using a different clipboard tool or check if xclip is installed correctly.
 
+### Clipboard Issues
+
+If you're experiencing issues with text not being copied to clipboard:
+
+1. Make sure both xclip and xsel are installed:
+
+```bash
+sudo apt install xclip xsel  # for Debian/Ubuntu
+```
+
+2. Try running the script in a terminal to see any error messages.
+
+3. If issues persist, you can manually modify the script to use a different clipboard method by editing the `process_selected_text` function in `magic_writer.py`.
+
+4. For Wayland users: The clipboard functionality may be limited. Consider using X11 or searching for Wayland-specific clipboard utilities.
+
 ## License
 
 MIT
