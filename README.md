@@ -21,7 +21,7 @@ An AI-powered text enhancement tool for Linux that helps improve your English wr
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/magic-writer.git
+git clone https://github.com/fgrreloaded/magic-writer.git
 cd magic-writer
 ```
 
